@@ -2,10 +2,12 @@
  * Import
  */
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 /**
  * Local import
  */
+import Logo from '../../styles/images/macdiotswhite.png';
+
 // Composants
 
 // Styles et assets
@@ -19,10 +21,11 @@ const Navigation = () => (
   <div id="navigation">
     <nav>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/carte">Carte</NavLink>
+        <img src={Logo} alt="Logo MacDiot" />
+        <NavLink to="/about">A propos</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </ul>
     </nav>
   </div>

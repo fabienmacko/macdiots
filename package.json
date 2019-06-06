@@ -56,7 +56,8 @@
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
-    "react-redux": "*",
-    "redux": "*"
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1"
   }
 }
