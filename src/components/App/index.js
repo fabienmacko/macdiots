@@ -19,16 +19,23 @@ import './app.scss';
  * Code
  */
 
-const App = () => (
-  <div id="app">
-    <Navigation />
-    <Switch>
-      <Route exact path="/" component={Accueil} />
-      <Route exact path="/carte" component={Carte} />
-      <Route exact path="/about" component={About} />
-    </Switch>
-  </div>
-);
+class App extends React.Component {
+  componentDidMount(){
+    $("#loader").fadeOut(400);
+  }
+  render() {
+    return (
+      <div id="app">
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Accueil} />
+          <Route exact path="/carte" component={Carte} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </div>
+    );
+  }
+}
 
 /**
  * Export

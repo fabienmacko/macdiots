@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom';
  */
 import Logo from '../../styles/images/logo.png';
 import Phone from '../../styles/images/phone.svg';
+import BurgerNav from '../../containers/BurgerNav';
 
 // Composants
 
@@ -20,15 +21,8 @@ import './navigation.scss';
 
 const Navigation = () => (
   <div id="navigation">
-    <nav>
-      <ul>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/carte">Carte</NavLink>
-        <img src={Logo} alt="Logo MacDiot" id='logo'/>
-        <NavLink to="/about">A propos</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </ul>
-    </nav>
+    <img src={Logo} alt="Logo MacDiot" id='logo'/>
+    <BurgerNav />
     <a href="tel:+33788363945" id='phonecall'><img src={Phone} alt="Phone Call"/></a>
   </div>
 );

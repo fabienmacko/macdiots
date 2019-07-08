@@ -2,13 +2,14 @@
  * Initial State
  */
 const initialState = {
-  message: 'Hello',
+  isMenuOpen: false,
 };
 
 /**
  * Types
  */
-const DO_SOMETHING = 'DO_SOMETHING';
+const CLOSE_MENU = 'CLOSE_MENU';
+const TOGGLE_MENU = 'TOGGLE_MENU';
 
 /**
  * Traitements
@@ -19,10 +20,16 @@ const DO_SOMETHING = 'DO_SOMETHING';
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case DO_SOMETHING:
+    case CLOSE_MENU:
       return {
         ...state,
+        isMenuOpen: false,
       };
+      case TOGGLE_MENU:
+        return {
+          ...state,
+          isMenuOpen: !state.isMenuOpen,
+        };
 
     default:
       return state;
@@ -32,8 +39,12 @@ const reducer = (state = initialState, action = {}) => {
 /**
  * Action Creators
  */
-export const doSomething = () => ({
-  type: DO_SOMETHING,
+export const closeMenu = () => ({
+  type: CLOSE_MENU,
+});
+
+export const toggleMenu = () => ({
+  type: TOGGLE_MENU,
 });
 
 /**
