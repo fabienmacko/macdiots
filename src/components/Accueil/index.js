@@ -37,38 +37,25 @@ class Accueil extends React.Component {
           <div className="owl-carousel">
             <div
               className="owl-item-content"
-              style={{
-                backgroundImage: `url(${Burger1})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                filter: 'brightness(0.8)',
-              }}
             >
+              <img src={Burger1} alt="Burger image" className="welcome-image"/>
               <p className="slogan">Un bon burger, ça n'attend pas.</p>
             </div>
             <div
               className="owl-item-content"
-              style={{
-                backgroundImage: `url(${Burger2})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-              }}
             >
+              <img src={Burger2} alt="Burger image" className="welcome-image" />
               <p className="slogan">Des produits frais et locaux.</p>
             </div>
             <div
               className="owl-item-content"
-              style={{
-                backgroundImage: `url(${Burger3})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-              }}
             >
+              <img src={Burger3} alt="Burger image" className="welcome-image"/>
               <p className="slogan">A emporter ou en terasse.</p>
             </div>
           </div>
           <div className="link-container">
-            <Link to="/contact">Commander maintenant</Link>
+            <Link to="/contact">COMMANDER MAINTENANT</Link>
           </div>
         </div>
       </div>

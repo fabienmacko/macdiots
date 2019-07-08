@@ -1,4 +1,63 @@
 @import 'src/styles/_vars';
+
+@keyframes ring {
+
+  10% {
+    transform: rotate(20deg);
+    width: 75px;
+    height: 75px;
+  }
+
+  20% {
+    transform: rotate(-20deg);
+    width: 75px;
+    height: 75px;
+  }
+
+  30% {
+    transform: rotate(20deg);
+    width: 75px;
+    height: 75px;
+  }
+
+  40% {
+    transform: rotate(-20deg);
+    width: 75px;
+    height: 75px;
+  }
+
+  50% {
+    transform: rotate(20deg);
+    width: 75px;
+    height: 75px;
+  }
+
+  60% {
+    transform: rotate(-20deg);
+    width: 75px;
+    height: 75px;
+  }
+
+  70% {
+      transform: rotate(20deg);
+      width: 75px;
+      height: 75px;
+  }
+
+  80% {
+    transform: rotate(-20deg);
+    width: 75px;
+    height: 75px;
+  }
+  
+  100% {
+    transform: rotate(0deg);
+    width: 60px;
+    height: 60px;
+  }
+
+}
+
 #navigation {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
   position: fixed;
@@ -6,24 +65,55 @@
   right: 0px;
   width: 100%;
   z-index: 10;
-  img {
-    width: 170px;
-    height: 170px;
+  #logo {
+    width: 250px;
+    height: 250px;
     margin: 0 2rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -30px;
   }
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $grey;
+    padding: 20px 0;
+    border-bottom: 2px solid $red;
+    height: 100px;
+    & a:nth-child(2) {
+      margin-right: 150px;
+    }
+    & a:nth-child(4) {
+      margin-left: 150px;
+    }
     a {
       font-size: 1.3em;
       margin: 0 2rem;
       color: white;
       transition: 0.4s;
+      text-decoration: none !important;
       &:hover {
-        color: $green;
+        color: $red;
         cursor: pointer;
       }
+    }
+  }
+  #phonecall {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    &:hover {
+      animation: ring 1s;
+    }
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
 }

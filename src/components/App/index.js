@@ -8,6 +8,8 @@ import { Switch, Route } from 'react-router-dom';
  */
 import Navigation from '../Navigation';
 import Accueil from '../Accueil';
+import Carte from '../Carte';
+import About from '../About';
 // Composants
 
 // Styles et assets
@@ -22,6 +24,8 @@ const App = () => (
     <Navigation />
     <Switch>
       <Route exact path="/" component={Accueil} />
+      <Route exact path="/carte" component={Carte} />
+      <Route exact path="/about" component={About} />
     </Switch>
   </div>
 );
